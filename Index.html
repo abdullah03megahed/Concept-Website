@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Customer Information Form</title>
+<title> Information Form</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 <style>
   /* Reset and base */
@@ -29,7 +29,7 @@
   }
   /* Container */
   .container {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     background: white;
     border-radius: 12px;
@@ -38,19 +38,20 @@
   }
   /* Logos container */
   .logos {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 32px;
-    gap: 16px;
-  }
-  .logos img {
-    width: 30%;
-    max-height: 80px;
-    object-fit: contain;
-    border-radius: 8px;
-    background: #e0e7ff;
-    border: 1px solid #cbd5e1;
-  }
+    display: flex;                           
+    justify-content: center;                 
+    margin-bottom: 32px;                    
+    gap: 16px;                               
+}
+.logos img {
+    width: auto;                             
+    max-width: 100%;                         
+    max-height: 80px;                       
+    object-fit: contain;                     
+    border-radius: 8px;                      
+    background: #e0e7ff;                    
+    border: 1px solid #cbd5e1;              
+}
 
   form {
     display: flex;
@@ -158,12 +159,10 @@
 <body>
   <div class="container" role="main">
     <div class="logos" aria-label="Logos placeholders">
-      <img src="C:\Users\hp\Desktop\project\WhatsApp Image 2025-06-15 at 15.49.54_bb02c0f1.jpg" />
       <img src="C:\Users\hp\Desktop\project\WhatsApp Image 2025-06-15 at 14.48.07_3ad57dab.jpg" />
-      <img src="C:\Users\hp\Desktop\project\WhatsApp Image 2025-06-15 at 15.38.34_acf2dc25.jpg" />
     </div>
 
-    <h1>Customer Information Form</h1>
+    <h1>Information Form</h1>
 
     <form id="customerForm" novalidate>
       <div>
@@ -192,6 +191,24 @@
           <option value="" disabled selected>Select Year</option>
           <!-- JS inserts options 2010 - 2025 -->
         </select>
+      </div>
+      
+      <fieldset>
+        <legend>Do you have a Laptop? *</legend>
+        <div class="radio-group" role="radiogroup" aria-required="true" aria-labelledby="dO YOU HAVE A Laptop?" id="Do you have a Laptop?">
+          <label class="radio-label">
+            <input type="radio" name="Laptopowner" value="yes" required aria-required="true" />
+            Yes
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="Laptopowner" value="no" />
+            No
+          </label>
+        </div>
+      </fieldset>
+      <div id="LaptopModelGroup" class="conditional-group">
+        <label for="LaptopModel">Laptop Model *</label>
+        <input type="text" id="LaptopModel" name="Laptop" placeholder="Enter your Laptop model" />
       </div>
 
       <fieldset>
@@ -363,4 +380,3 @@
 </script>
 </body>
 </html>
-
