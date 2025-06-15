@@ -1,0 +1,56 @@
+:root {
+    --dark-blue: #001F3F;    /* From Image 1 */
+    --orange: #FFA500;       /* From Image 1 */
+    --white: #FFFFFF;        /* From Image 1 */
+    --dark-gray: #333333;    /* From Image 2 */
+    --soft-blue: #007BFF;    /* From Image 2 */
+    --light-gray: #F1F1F1;    /* From Image 2 */
+}
+
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--dark-blue);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--soft-blue);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
